@@ -1,0 +1,284 @@
+﻿body {
+    font-size: 10px;
+    margin: 0;
+    background: black;
+}
+.viewport {
+   width: 100%;
+   height: 400%;
+   overflow: hidden;
+   /* pointer-events: none; 这句话会导致整个页面上的点击事件失效，如需绑定点击事件，请注掉 */
+   transform: translate3d(0px, 0px, 0px);
+   backface-visibility: hidden;
+   position: relative;
+}
+#box {
+    position: relative;
+    /* width: 800px; */
+}
+.top {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+#bg {
+    vertical-align: bottom;
+    width: 100%;
+}
+#first-letter {
+    margin-top: 1.5rem;
+    width: 100%;
+    animation: letterAnimation linear 0.5s;
+    animation-fill-mode: forwards;
+}
+#first-portrait {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    width: 70%;
+    animation: portraitAnimation linear 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+#first-title {
+    margin-top: 25rem;
+    margin-left: 1rem;
+    width: 90%;
+    animation: gradualChange linear 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes gradualChange {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes letterAnimation {
+    0% {
+        opacity: 0;
+        margin-top: 6.5rem;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 1.5rem;
+    }
+}
+
+@keyframes portraitAnimation {
+    0% {
+        opacity: 0;
+        margin-top: 7rem;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 2rem;
+    }
+}
+
+@keyframes arrowsAnimation {
+    0% {
+        opacity: 0;
+        margin-top: 36.5rem;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 38.5rem;
+    }
+}
+#first-hint {
+    margin-top: 34rem;
+    margin-left: 1.8rem;
+    width: 85%;
+    animation: gradualChange linear 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+#first-arrows {
+    margin-top: 36.5rem;
+    margin-left: 10.5rem;
+    width: 7%;
+    animation: arrowsAnimation linear 0.8s infinite;
+    animation-delay: 2s;
+    animation-direction: alternate;
+}
+
+.second-text1 {
+    width: 90%;
+    margin-left: 1rem;
+    margin-top: 9rem;
+    animation: gradualChange linear 1s;
+    animation-fill-mode: forwards;
+}
+.second-text2 {
+    left: 0;
+    margin-left: 2rem;
+    margin-top: 12.5rem;
+    transform: scale(0.45);
+    animation: gradualChange linear 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.second-text3 {
+    left: 0;
+    margin-top: 15.5rem;
+    transform: scale(0.45);
+    animation: gradualChange linear 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+.second-text4 {
+    left: -7rem;
+    margin-top: 18.3rem;
+    transform: scale(0.45);
+    animation: gradualChange linear 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+.second-text5 {
+    left: -4rem;
+    margin-top: 20.7rem;
+    transform: scale(0.45);
+    animation: gradualChange linear 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+.second-text6 {
+    left: -3.3rem;
+    margin-left: 2rem;
+    margin-top: 23.6rem;
+    transform: scale(0.45);
+    animation: gradualChange linear 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+.second-text7 {
+    left: -6.8rem;
+    margin-left: 2rem;
+    margin-top: 26.3rem;
+    transform: scale(0.45);
+    animation: gradualChange linear 1s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+.second-image1 {
+    left: 0.5rem;
+    width: 95%;
+    margin-top: 32rem;
+    animation: second-image1Animation linear 0.5s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes second-image1Animation {
+    0% {
+        opacity: 0;
+        margin-top: 35rem;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 32rem;
+    }
+}
+
+#third-text1 {
+    left: 3.3rem;
+    width: 75%;
+    margin-top: 2rem;
+    animation: gradualChange linear 1s;
+    animation-fill-mode: forwards;
+}
+#third-text2 {
+    width: 100%;
+    margin-top: 5.8rem;
+    animation: gradualChange linear 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+#third-text3 {
+    left: 3rem;
+    width: 75%;
+    margin-top: 6.9rem;
+    animation: gradualChange linear 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+#third-image1 {
+    left: 2.8rem;
+    height: 45%;
+    margin-top: 9.8rem;
+    animation: gradualChange linear 1s;
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+}
+#third-image2 {
+    left: 7.5rem;
+    height: 45%;
+    margin-top: 9.8rem;
+    animation: third-image1Animation linear 1s;
+    animation-delay: 1.9s;
+    animation-fill-mode: forwards;
+}
+#third-image3 {
+    left: 12.5rem;
+    height: 45%;
+    margin-top: 9.8rem;
+    animation: third-image1Animation linear 1s;
+    animation-delay: 2.1s;
+    animation-fill-mode: forwards;
+}
+#third-image4 {
+    left: 17rem;
+    height: 45%;
+    margin-top: 9.8rem;
+    animation: third-image1Animation linear 1s;
+    animation-delay: 2.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes third-image1Animation {
+    0% {
+        opacity: 0;
+        margin-top: 15rem;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 10rem;
+    }
+}
+#third-text4 {
+    left: 3rem;
+    width: 75%;
+    margin-top: 29rem;
+    animation: gradualChange linear 1s;
+    animation-delay: 3.3s;
+    animation-fill-mode: forwards;
+}
+#third-image5 {
+    left: 6rem;
+    width: 50%;
+    margin-top: 30.8rem;
+    animation: third-image5Animation linear 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes third-image5Animation {
+    0% {
+        opacity: 0;
+        margin-top: 35rem;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 30.8rem;
+    }
+}
+#third-text5 {
+    left: 5rem;
+    width: 60%;
+    margin-top: 38rem;
+    animation: gradualChange linear 1s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}

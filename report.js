@@ -19,7 +19,7 @@ var bindAll = function (elements, eventName, callback) {
     }
 }
 
-// 禁止移动端默认滑动
+// 禁止移动端默认滑动，需要配合 css touch-action: none; 使用
 var ban = function() {
     var b = e('body')
     b.addEventListener('touchmove', function(event) {
@@ -36,25 +36,23 @@ var ban = function() {
 var alterY = function(pageindex) {
     var v = e('.viewport')
     v.style.transition = "0.5s ease transform"
-    v.style.transform = `translateY(${-pageindex}px)`
+    v.style.transform = `translate3d(0px, ${-pageindex}px, 0px)`
 }
 
 // 给 element 绑定事件
 var bindSlideEvent = function() {
-    var h = window.innerHeight
+    var h = 667
     var index = 1
     var startX = 0
     var startY = 0
 
     e('.viewport').addEventListener('touchstart', function(event){
-        event.preventDefault()
         startX = parseInt(event.touches[0].pageX)
         startY = parseInt(event.touches[0].pageY)
         log('touchstart', startX, startY)
     })
 
     e('.viewport').addEventListener('touchmove', function(event){
-        event.preventDefault()
         var moveX = event.touches[0].pageX
         var moveY = event.touches[0].pageY
         var deltaX = parseInt(event.touches[0].pageX - startX)
@@ -74,7 +72,6 @@ var bindSlideEvent = function() {
     })
 
     e('.viewport').addEventListener('touchend', function(event){
-        event.preventDefault()
         var endX = parseInt(event.changedTouches[0].pageX - startX)
         var endY = parseInt(event.changedTouches[0].pageY - startY)
         log('touchend', endX, endY)
@@ -98,5 +95,5 @@ var bindSlideEvent = function() {
     })
 }
 
-// ban()
+ban()
 bindSlideEvent()

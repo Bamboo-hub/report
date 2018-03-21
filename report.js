@@ -19,6 +19,7 @@ var bindAll = function (elements, eventName, callback) {
     }
 }
 
+
 // 禁止移动端默认滑动，需要配合 css touch-action: none; 使用
 var ban = function() {
     var b = e('body')
@@ -41,7 +42,7 @@ var alterY = function(pageindex) {
 
 // 给 element 绑定事件
 var bindSlideEvent = function() {
-    var h = 667
+    var h = window.innerHeight
     var index = 1
     var startX = 0
     var startY = 0

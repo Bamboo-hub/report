@@ -13,7 +13,7 @@
    backface-visibility: hidden;
    position: relative;
 }
-#box {
+.box {
     position: relative;
     /* width: 800px; */
 }
@@ -23,18 +23,18 @@
     /* opacity: 0; */
 }
 
-#bg {
+.bg {
     vertical-align: bottom;
     width: 100%;
 }
 #first-letter {
-    margin-top: 1.5rem;
+    top: 4%;
     width: 100%;
     animation: letterAnimation linear 0.5s;
     animation-fill-mode: forwards;
 }
 #first-portrait {
-    margin-top: 2rem;
+    top: 5%;
     margin-left: 3rem;
     width: 70%;
     animation: portraitAnimation linear 0.5s;
@@ -42,7 +42,7 @@
     animation-fill-mode: forwards;
 }
 #first-title {
-    margin-top: 25rem;
+    top: 60%;
     margin-left: 1rem;
     width: 90%;
     animation: gradualChange linear 1s;
@@ -62,37 +62,37 @@
 @keyframes letterAnimation {
     0% {
         opacity: 0;
-        margin-top: 6.5rem;
+        top: 14%;
     }
     100% {
         opacity: 1;
-        margin-top: 1.5rem;
+        top: 4%;
     }
 }
 
 @keyframes portraitAnimation {
     0% {
         opacity: 0;
-        margin-top: 7rem;
+        top: 15%;
     }
     100% {
         opacity: 1;
-        margin-top: 2rem;
+        top: 5%;
     }
 }
 
 @keyframes arrowsAnimation {
     0% {
         opacity: 0;
-        margin-top: 36.5rem;
+        top: 92%;
     }
     100% {
         opacity: 1;
-        margin-top: 38.5rem;
+        top: 88%;
     }
 }
 #first-hint {
-    margin-top: 34rem;
+    top: 82%;
     margin-left: 1.8rem;
     width: 85%;
     animation: gradualChange linear 1s;
@@ -100,7 +100,7 @@
     animation-fill-mode: forwards;
 }
 #first-arrows {
-    margin-top: 36.5rem;
+    top: 92%;
     margin-left: 10.5rem;
     width: 7%;
     animation: arrowsAnimation linear 0.8s infinite;

@@ -41,13 +41,13 @@ var alterY = function(pageindex) {
 }
 
 var boxHeight = function() {
+    var w = window.innerWidth
     var h = window.innerHeight
     var bs = es('.box')
     for (var i = 0; i < bs.length; i++) {
         var b = bs[i]
-        log(b, h)
         b.style.height = `${h}px`
-        log(b.style.height)
+        b.style.width = `${w}px`
     }
 }
 

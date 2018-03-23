@@ -40,6 +40,17 @@ var alterY = function(pageindex) {
     v.style.transform = `translate3d(0px, ${-pageindex}px, 0px)`
 }
 
+var boxHeight = function() {
+    var h = window.innerHeight
+    var bs = es('.box')
+    for (var i = 0; i < bs.length; i++) {
+        var b = bs[i]
+        log(b, h)
+        b.style.height = `${h}px`
+        log(b.style.height)
+    }
+}
+
 // 给 element 绑定事件
 var bindSlideEvent = function() {
     var h = window.innerHeight
@@ -97,4 +108,5 @@ var bindSlideEvent = function() {
 }
 
 ban()
+boxHeight()
 bindSlideEvent()

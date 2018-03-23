@@ -17,10 +17,9 @@
     position: relative;
     /* width: 800px; */
 }
-/* .top {
+.top {
     position: absolute;
-    top: 0;
-} */
+}
 
 .bg {
     vertical-align: bottom;

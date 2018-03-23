@@ -20,34 +20,33 @@
 .top {
     position: absolute;
     top: 0;
-    /* opacity: 0; */
 }
 
 .bg {
     vertical-align: bottom;
     width: 100%;
 }
-#first-letter {
+.first-letter {
     top: 4%;
     width: 100%;
-    animation: letterAnimation linear 0.5s;
-    animation-fill-mode: forwards;
+    /* animation: letterAnimation linear 0.5s;
+    animation-fill-mode: forwards; */
 }
-#first-portrait {
+.first-portrait {
     top: 5%;
     margin-left: 3rem;
     width: 70%;
-    animation: portraitAnimation linear 0.5s;
+    /* animation: portraitAnimation linear 0.5s;
     animation-delay: 0.5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
-#first-title {
+.first-title {
     top: 60%;
     margin-left: 1rem;
     width: 90%;
-    animation: gradualChange linear 1s;
+    /* animation: gradualChange linear 1s;
     animation-delay: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
 
 @keyframes gradualChange {
@@ -91,21 +90,21 @@
         top: 88%;
     }
 }
-#first-hint {
+.first-hint {
     top: 82%;
     margin-left: 1.8rem;
     width: 85%;
-    animation: gradualChange linear 1s;
+    /* animation: gradualChange linear 1s;
     animation-delay: 1.5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
 }
-#first-arrows {
+.first-arrows {
     top: 92%;
     margin-left: 10.5rem;
     width: 7%;
-    animation: arrowsAnimation linear 0.8s infinite;
+    /* animation: arrowsAnimation linear 0.8s infinite;
     animation-delay: 2s;
-    animation-direction: alternate;
+    animation-direction: alternate; */
 }
 
 .second-text1 {

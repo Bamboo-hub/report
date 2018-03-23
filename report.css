@@ -27,26 +27,42 @@
     width: 100%;
 }
 .first-letter {
-    top: 4%;
-    width: 100%;
+    /* top: 4%;
+    width: 100%; */
     /* animation: letterAnimation linear 0.5s;
     animation-fill-mode: forwards; */
 }
 .first-portrait {
-    top: 5%;
+    /* top: 5%;
     margin-left: 3rem;
-    width: 70%;
+    width: 70%; */
     /* animation: portraitAnimation linear 0.5s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards; */
 }
 .first-title {
-    top: 60%;
+    /* top: 60%;
     margin-left: 1rem;
-    width: 90%;
+    width: 90%; */
     /* animation: gradualChange linear 1s;
     animation-delay: 1s;
     animation-fill-mode: forwards; */
+}
+.first-hint {
+    /* top: 82%;
+    margin-left: 1.8rem;
+    width: 85%; */
+    /* animation: gradualChange linear 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards; */
+}
+.first-arrows {
+    /* top: 92%;
+    margin-left: 10.5rem;
+    width: 7%; */
+    /* animation: arrowsAnimation linear 0.8s infinite;
+    animation-delay: 2s;
+    animation-direction: alternate; */
 }
 
 @keyframes gradualChange {
@@ -90,22 +106,7 @@
         top: 88%;
     }
 }
-.first-hint {
-    top: 82%;
-    margin-left: 1.8rem;
-    width: 85%;
-    /* animation: gradualChange linear 1s;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards; */
-}
-.first-arrows {
-    top: 92%;
-    margin-left: 10.5rem;
-    width: 7%;
-    /* animation: arrowsAnimation linear 0.8s infinite;
-    animation-delay: 2s;
-    animation-direction: alternate; */
-}
+
 
 .second-text1 {
     width: 90%;

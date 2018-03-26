@@ -30,82 +30,26 @@
 .first-letter {
     top: 4%;
     width: 100%;
-    animation: letterAnimation linear 0.5s;
-    animation-fill-mode: forwards;
 }
 .first-portrait {
     top: 5%;
     margin-left: 3rem;
     width: 70%;
-    animation: portraitAnimation linear 0.5s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
 }
 .first-title {
     top: 60%;
     margin-left: 1rem;
     width: 90%;
-    animation: gradualChange linear 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
 }
 .first-hint {
     top: 82%;
     margin-left: 1.8rem;
     width: 85%;
-    animation: gradualChange linear 1s;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
 }
 .first-arrows {
     top: 92%;
     left: 46%;
     width: 7%;
-    animation: arrowsAnimation linear 0.8s infinite;
-    animation-delay: 2s;
-    animation-direction: alternate;
-}
-
-@keyframes gradualChange {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes letterAnimation {
-    0% {
-        opacity: 0;
-        top: 14%;
-    }
-    100% {
-        opacity: 1;
-        top: 4%;
-    }
-}
-
-@keyframes portraitAnimation {
-    0% {
-        opacity: 0;
-        top: 15%;
-    }
-    100% {
-        opacity: 1;
-        top: 5%;
-    }
-}
-
-@keyframes arrowsAnimation {
-    0% {
-        opacity: 0;
-        top: 92%;
-    }
-    100% {
-        opacity: 1;
-        top: 88%;
-    }
 }
 
 
@@ -113,171 +57,90 @@
     top: 20%;
     left: 5%;
     width: 90%;
-    animation: gradualChange linear 1s;
-    animation-fill-mode: forwards;
 }
 .second-text2 {
     top: 30.5%;
     left: 28%;
     width: 39%;
-    animation: gradualChange linear 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
 }
 .second-text3 {
     top: 37.5%;
     left: 24%;
     width: 47%;
-    animation: gradualChange linear 1s;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
 }
 .second-text4 {
     top: 44.5%;
     left: 14%;
     width: 75%;
-    animation: gradualChange linear 1s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
 }
 .second-text5 {
     top: 51%;
     left: 18%;
     width: 65%;
-    animation: gradualChange linear 1s;
-    animation-delay: 2.5s;
-    animation-fill-mode: forwards;
 }
 .second-text6 {
     top: 58%;
     left: 22%;
     width: 54%;
-    animation: gradualChange linear 1s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
 }
 .second-text7 {
     top: 65%;
     left: 17%;
     width: 71%;
-    animation: gradualChange linear 1s;
-    animation-delay: 3.5s;
-    animation-fill-mode: forwards;
 }
 .second-image1 {
     top: 76%;
     left: 2.5%;
     width: 95%;
-    animation: second-image1Animation linear 0.5s;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
-}
-@keyframes second-image1Animation {
-    0% {
-        opacity: 0;
-        top: 81%;
-    }
-    100% {
-        opacity: 1;
-        top: 76%;
-    }
 }
 
-#third-text1 {
+
+.third-text1 {
     top: 5%;
     left: 12.5%;
     width: 75%;
-    animation: gradualChange linear 1s;
-    animation-fill-mode: forwards;
 }
-#third-text2 {
+.third-text2 {
     top: 15.5%;
     width: 100%;
-    animation: gradualChange linear 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
 }
-#third-text3 {
+.third-text3 {
     top: 18%;
     left: 12.5%;
     width: 75%;
-    animation: gradualChange linear 1s;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
 }
-#third-image1 {
+.third-image1 {
     top: 23.5%;
     left: 12.5%;
     height: 45%;
-    animation: gradualChange linear 1s;
-    animation-delay: 1.7s;
-    animation-fill-mode: forwards;
 }
-#third-image2 {
+.third-image2 {
     top: 23.5%;
     left: 35%;
     height: 45%;
-    animation: third-image1Animation linear 1s;
-    animation-delay: 1.9s;
-    animation-fill-mode: forwards;
 }
-#third-image3 {
+.third-image3 {
     top: 23.5%;
     left: 55%;
     height: 45%;
-    animation: third-image1Animation linear 1s;
-    animation-delay: 2.1s;
-    animation-fill-mode: forwards;
 }
-#third-image4 {
+.third-image4 {
     top: 23.5%;
     left: 75%;
     height: 45%;
-    animation: third-image1Animation linear 1s;
-    animation-delay: 2.3s;
-    animation-fill-mode: forwards;
 }
-@keyframes third-image1Animation {
-    0% {
-        opacity: 0;
-        top: 28.5%;
-    }
-    100% {
-        opacity: 1;
-        top: 23.5%;
-    }
-}
-#third-text4 {
+.third-text4 {
     top: 69%;
     left: 12.5%;
     width: 75%;
-    animation: gradualChange linear 1s;
-    animation-delay: 3.3s;
-    animation-fill-mode: forwards;
 }
-#third-image5 {
+.third-image5 {
     top: 75%;
     left: 25%;
     width: 50%;
-    animation: third-image5Animation linear 1s;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
 }
-#third-text5 {
+.third-text5 {
     top: 92%;
     left: 20%;
     width: 60%;
-    animation: gradualChange linear 1s;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
-}
-@keyframes third-image5Animation {
-    0% {
-        opacity: 0;
-        top: 80%;
-    }
-    100% {
-        opacity: 1;
-        top: 75%;
-    }
 }

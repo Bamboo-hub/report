@@ -24,7 +24,6 @@ var bindAll = function (elements, eventName, callback) {
 var ban = function() {
     var b = e('body')
     b.addEventListener('touchmove', function(event) {
-        log(event)
         event = event ? event : window.event;
         if(event.preventDefault) {
           event.preventDefault()
@@ -61,7 +60,6 @@ var bindSlideEvent = function() {
     e('.viewport').addEventListener('touchstart', function(event){
         startX = parseInt(event.touches[0].pageX)
         startY = parseInt(event.touches[0].pageY)
-        log('touchstart', startX, startY)
     })
 
     e('.viewport').addEventListener('touchmove', function(event){
@@ -86,14 +84,12 @@ var bindSlideEvent = function() {
     e('.viewport').addEventListener('touchend', function(event){
         var endX = parseInt(event.changedTouches[0].pageX - startX)
         var endY = parseInt(event.changedTouches[0].pageY - startY)
-        log('touchend', endX, endY)
         if (Math.abs(endX) < Math.abs(endY)){
             // 如果 Y 方向上的位移是正数，并且 index 大于 0，则用户是在至少第二页往回滑动
             if (endY > 0 && index > 1) {
                 var y = (index - 2) * h
                 alterY(y)
                 index--
-                log('i-', index)
             } else if (endY > 0 && index == 1) {
                 var y = 0
                 alterY(y)
@@ -101,10 +97,74 @@ var bindSlideEvent = function() {
                 var y = index * h
                 alterY(y)
                 index++
-                log('i+', index)
             }
         }
+        singlePageAnimation(index)
     })
+}
+
+var removeElseClass = function(list, nowindex) {
+    var ls = Object.keys(list)
+    for (var i = 0; i < ls.length; i++) {
+        var l = list[ls[i]]
+        if (l != nowindex) {
+            var es = Object.keys(l)
+            for (var j = 0; j < es.length; j++) {
+                var en = es[j]
+                var c = l[en]
+                // log('l', en, c)
+                e(en).classList.remove(c)
+            }
+        }
+    }
+}
+
+var singlePageAnimation = function(nowindex) {
+    var first = {
+        '.first-letter': 'first-letter-animation',
+        '.first-portrait': 'first-portrait-animation',
+        '.first-title': 'first-title-animation',
+        '.first-hint': 'first-hint-animation',
+        '.first-arrows': 'first-arrows-animation',
+    }
+
+    var second = {
+        '.second-text1': 'second-text1-animation',
+        '.second-text2': 'second-text2-animation',
+        '.second-text3': 'second-text3-animation',
+        '.second-text4': 'second-text4-animation',
+        '.second-text5': 'second-text5-animation',
+        '.second-text6': 'second-text6-animation',
+        '.second-text7': 'second-text7-animation',
+        '.second-image1': 'second-image1-animation',
+    }
+
+    var third = {
+        '.third-text1': 'third-text1-animation',
+        '.third-text2': 'third-text2-animation',
+        '.third-text3': 'third-text3-animation',
+        '.third-text4': 'third-text4-animation',
+        '.third-text5': 'third-text5-animation',
+        '.third-image1': 'third-image1-animation',
+        '.third-image2': 'third-image2-animation',
+        '.third-image3': 'third-image3-animation',
+        '.third-image4': 'third-image4-animation',
+        '.third-image5': 'third-image5-animation',
+    }
+
+    var page = {
+        page1: first,
+        page2: second,
+        page3: third,
+    }
+
+    var index = page['page' + nowindex]
+    var ks = Object.keys(index)
+    for (var i = 0; i < ks.length; i++) {
+        var k = ks[i]
+        e(k).classList.add(index[k])
+        // removeElseClass(page, index)
+    }
 }
 
 ban()

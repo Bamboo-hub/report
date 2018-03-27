@@ -11,15 +11,6 @@ var es = function (sel) {
     return document.querySelectorAll(sel)
 }
 
-// 给多个class绑定事件
-var bindAll = function (elements, eventName, callback) {
-    for (var i = 0; i < elements.length; i++) {
-        var tag = elements[i]
-        tag.addEventListener(eventName, callback)
-    }
-}
-
-
 // 禁止移动端默认滑动，需要配合 css touch-action: none; 使用
 var ban = function() {
     var b = e('body')
@@ -48,6 +39,11 @@ var boxHeight = function() {
         b.style.height = `${h}px`
         b.style.width = `${w}px`
     }
+    var w = window.innerWidth
+    var h = window.innerHeight
+    var load = e('.caseBlanche')
+    load.style.top = `${(h - 100) / 2}px`
+    load.style.left = `${(w - 100) / 2}px`
 }
 
 // 给 element 绑定事件
@@ -104,6 +100,7 @@ var bindSlideEvent = function() {
 }
 
 var removeElseClass = function(list, nowindex) {
+    // 遍历所有页码的所有元素，将当前页码外的所有动画删除
     var ls = Object.keys(list)
     for (var i = 0; i < ls.length; i++) {
         var l = list[ls[i]]
@@ -120,6 +117,9 @@ var removeElseClass = function(list, nowindex) {
 }
 
 var singlePageAnimation = function(nowindex) {
+
+    // key 是元素静态 class, 用来找到对应元素,
+    // value 是要添加的动画样式的 class 名称
     var first = {
         '.first-letter': 'first-letter-animation',
         '.first-portrait': 'first-portrait-animation',
@@ -158,15 +158,37 @@ var singlePageAnimation = function(nowindex) {
         page3: third,
     }
 
+    // 动画默认不播放，点击事件传过来一个页码，说明用户正在本页，将该页的所有元素添加动画
     var index = page['page' + nowindex]
     var ks = Object.keys(index)
     for (var i = 0; i < ks.length; i++) {
         var k = ks[i]
         e(k).classList.add(index[k])
+        // 除本页外的元素都删除动画，可实现每次划到某页都重新播放动画
         // removeElseClass(page, index)
+    }
+}
+
+var imagesLonding = function() {
+    var images = es('img')
+    var a = []
+    for (var i = 0; i < images.length; i++) {
+        var image = images[i]
+        image.onload = function() {
+            a.push('1')
+            log(a.length, images.length)
+            if (a.length == images.length) {
+                log('图片加载完毕')
+                var load = e('.caseBlanche')
+                load.remove()
+                var viewport = e('.viewport')
+                viewport.style.display = 'block'
+            }
+        }
     }
 }
 
 ban()
 boxHeight()
 bindSlideEvent()
+imagesLonding()

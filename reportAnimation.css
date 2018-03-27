@@ -115,6 +115,7 @@
     }
 }
 
+
 .third-text1-animation {
     animation: gradualChange linear 1s;
     animation-fill-mode: forwards;
@@ -149,16 +150,6 @@
     animation-delay: 2.3s;
     animation-fill-mode: forwards;
 }
-@keyframes third-image1Animation {
-    0% {
-        opacity: 0;
-        top: 28.5%;
-    }
-    100% {
-        opacity: 1;
-        top: 23.5%;
-    }
-}
 .third-text4-animation {
     animation: gradualChange linear 1s;
     animation-delay: 3.3s;
@@ -173,6 +164,16 @@
     animation: gradualChange linear 1s;
     animation-delay: 4s;
     animation-fill-mode: forwards;
+}
+@keyframes third-image1Animation {
+    0% {
+        opacity: 0;
+        top: 28.5%;
+    }
+    100% {
+        opacity: 1;
+        top: 23.5%;
+    }
 }
 @keyframes third-image5Animation {
     0% {

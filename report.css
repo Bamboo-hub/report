@@ -1,199 +1,209 @@
-﻿body {
-    font-size: 10px;
-    margin: 0;
-    background: black;
-    touch-action: none;
-    height : 667px;
-    width : 375px;
-}
+@media all and (max-width: 600px){
+    #reminder {
+        display: none;
+    }
+    body {
+        font-size: 10px;
+        margin: 0;
+        background: black;
+        touch-action: none;
+        height : 667px;
+        width : 375px;
+    }
 
-.caseBlanche {
-    height : 100px;
-    width : 100px;
-    position : relative;
-}
+    .caseBlanche {
+        height : 100px;
+        width : 100px;
+        position : relative;
+    }
 
-#load {
-    color : #fff;
-    font-size: 10px;
-    text-align : center;
-    /* position : absolute; */
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    height: 100px;
-}
+    #load {
+        color : #fff;
+        font-size: 15px;
+        text-align : center;
+        /* position : absolute; */
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        height: 100px;
+    }
 
-#rond {
-    height  : 100px;
-    width : 100px;
-    border : 1px solid #fff;
-    border-radius : 50%;
-    position :absolute;
-    animation : rond 2s infinite;
-    -webkit-animation : rond 2s infinite;
-}
+    #rond {
+        height  : 100px;
+        width : 100px;
+        border : 1px solid #fff;
+        border-radius : 50%;
+        position :absolute;
+        animation : rond 2s infinite;
+        -webkit-animation : rond 2s infinite;
+    }
 
-@keyframes rond {
-    0% {transform : rotate(0deg);}
-    100% {transform : rotate(360deg);}
-}
+    @keyframes rond {
+        0% {transform : rotate(0deg);}
+        100% {transform : rotate(360deg);}
+    }
 
-@-webkit-keyframes rond {
-    0% {-webkit-transform : rotate(0deg);}
-    100% {-webkit-transform : rotate(360deg);}
-}
+    @-webkit-keyframes rond {
+        0% {-webkit-transform : rotate(0deg);}
+        100% {-webkit-transform : rotate(360deg);}
+    }
 
-#test {
-    height : 10px;
-    width : 10px;
-    position : absolute;
-    background-color : #fff;
-    border-radius : 50%;
-    top : 9px;
-    left : 10px;
-}
-
-
-.viewport {
-    display: none;
-    width: 100%;
-    height: 400%;
-    overflow: hidden;
-    /* pointer-events: none; 这句话会导致整个页面上的点击事件失效，如需绑定点击事件，请注掉 */
-    transform: translate3d(0px, 0px, 0px);
-    backface-visibility: hidden;
-    position: relative;
-}
-.box {
-    position: relative;
-}
-.top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
-
-.bg {
-    /* 下面这行可消除底部白边 */
-    vertical-align: bottom;
-    width: 100%;
-}
-.first-letter {
-    top: 4%;
-    width: 100%;
-}
-.first-portrait {
-    top: 5%;
-    margin-left: 3rem;
-    width: 70%;
-}
-.first-title {
-    top: 60%;
-    margin-left: 1rem;
-    width: 90%;
-}
-.first-hint {
-    top: 82%;
-    margin-left: 1.8rem;
-    width: 85%;
-}
-.first-arrows {
-    top: 92%;
-    left: 46%;
-    width: 7%;
-}
+    #test {
+        height : 10px;
+        width : 10px;
+        position : absolute;
+        background-color : #fff;
+        border-radius : 50%;
+        top : 9px;
+        left : 10px;
+    }
 
 
-.second-text1 {
-    top: 20%;
-    left: 5%;
-    width: 90%;
-}
-.second-text2 {
-    top: 30.5%;
-    left: 28%;
-    width: 39%;
-}
-.second-text3 {
-    top: 37.5%;
-    left: 24%;
-    width: 47%;
-}
-.second-text4 {
-    top: 44.5%;
-    left: 14%;
-    width: 75%;
-}
-.second-text5 {
-    top: 51%;
-    left: 18%;
-    width: 65%;
-}
-.second-text6 {
-    top: 58%;
-    left: 22%;
-    width: 54%;
-}
-.second-text7 {
-    top: 65%;
-    left: 17%;
-    width: 71%;
-}
-.second-image1 {
-    top: 76%;
-    left: 2.5%;
-    width: 95%;
-}
+    .viewport {
+        display: none;
+        width: 100%;
+        height: 400%;
+        overflow: hidden;
+        /* pointer-events: none; 这句话会导致整个页面上的点击事件失效，如需绑定点击事件，请注掉 */
+        transform: translate3d(0px, 0px, 0px);
+        backface-visibility: hidden;
+        position: relative;
+    }
+    .box {
+        position: relative;
+    }
+    .top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+
+    .bg {
+        /* 下面这行可消除底部白边 */
+        vertical-align: bottom;
+        width: 100%;
+    }
+    .first-letter {
+        top: 4%;
+        width: 100%;
+    }
+    .first-portrait {
+        top: 5%;
+        margin-left: 3rem;
+        width: 70%;
+    }
+    .first-title {
+        top: 60%;
+        margin-left: 1rem;
+        width: 90%;
+    }
+    .first-hint {
+        top: 82%;
+        margin-left: 1.8rem;
+        width: 85%;
+    }
+    .first-arrows {
+        top: 92%;
+        left: 46%;
+        width: 7%;
+    }
 
 
-.third-text1 {
-    top: 5%;
-    left: 12.5%;
-    width: 75%;
+    .second-text1 {
+        top: 20%;
+        left: 5%;
+        width: 90%;
+    }
+    .second-text2 {
+        top: 30.5%;
+        left: 28%;
+        width: 39%;
+    }
+    .second-text3 {
+        top: 37.5%;
+        left: 24%;
+        width: 47%;
+    }
+    .second-text4 {
+        top: 44.5%;
+        left: 14%;
+        width: 75%;
+    }
+    .second-text5 {
+        top: 51%;
+        left: 18%;
+        width: 65%;
+    }
+    .second-text6 {
+        top: 58%;
+        left: 22%;
+        width: 54%;
+    }
+    .second-text7 {
+        top: 65%;
+        left: 17%;
+        width: 71%;
+    }
+    .second-image1 {
+        top: 76%;
+        left: 2.5%;
+        width: 95%;
+    }
+
+
+    .third-text1 {
+        top: 5%;
+        left: 12.5%;
+        width: 75%;
+    }
+    .third-text2 {
+        top: 15.5%;
+        width: 100%;
+    }
+    .third-text3 {
+        top: 18%;
+        left: 12.5%;
+        width: 75%;
+    }
+    .third-image1 {
+        top: 23.5%;
+        left: 12.5%;
+        height: 45%;
+    }
+    .third-image2 {
+        top: 23.5%;
+        left: 35%;
+        height: 45%;
+    }
+    .third-image3 {
+        top: 23.5%;
+        left: 55%;
+        height: 45%;
+    }
+    .third-image4 {
+        top: 23.5%;
+        left: 75%;
+        height: 45%;
+    }
+    .third-text4 {
+        top: 69%;
+        left: 12.5%;
+        width: 75%;
+    }
+    .third-image5 {
+        top: 75%;
+        left: 25%;
+        width: 50%;
+    }
+    .third-text5 {
+        top: 92%;
+        left: 20%;
+        width: 60%;
+    }
 }
-.third-text2 {
-    top: 15.5%;
-    width: 100%;
-}
-.third-text3 {
-    top: 18%;
-    left: 12.5%;
-    width: 75%;
-}
-.third-image1 {
-    top: 23.5%;
-    left: 12.5%;
-    height: 45%;
-}
-.third-image2 {
-    top: 23.5%;
-    left: 35%;
-    height: 45%;
-}
-.third-image3 {
-    top: 23.5%;
-    left: 55%;
-    height: 45%;
-}
-.third-image4 {
-    top: 23.5%;
-    left: 75%;
-    height: 45%;
-}
-.third-text4 {
-    top: 69%;
-    left: 12.5%;
-    width: 75%;
-}
-.third-image5 {
-    top: 75%;
-    left: 25%;
-    width: 50%;
-}
-.third-text5 {
-    top: 92%;
-    left: 20%;
-    width: 60%;
+@media all and (min-width: 601px){
+    .box {
+        display: none;
+    }
 }

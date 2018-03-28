@@ -170,6 +170,7 @@ var singlePageAnimation = function(nowindex) {
 }
 
 var imagesLonding = function() {
+    log('图片加载检测')
     var images = es('img')
     var a = []
     for (var i = 0; i < images.length; i++) {

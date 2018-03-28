@@ -187,6 +187,13 @@ var imagesLonding = function() {
             }
         }
     }
+    window.onload = function() {
+        log('全部图片加载完毕')
+        var load = e('.caseBlanche')
+        load.remove()
+        var viewport = e('.viewport')
+        viewport.style.display = 'block'
+    }
 }
 
 ban()
